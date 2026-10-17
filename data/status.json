@@ -1,7 +1,7 @@
 {
-  "lastAttemptAt": "2026-10-17T10:08:42.323Z",
+  "lastAttemptAt": "2026-10-17T10:12:15.754Z",
   "lastSuccessAt": null,
-  "mode": "部分更新：新增 0 条；18 条摘要未完成",
+  "mode": "部分更新：新增 0 条；1 条摘要未完成",
   "sources": [
     {
       "name": "Armin Ronacher",
@@ -56,5 +56,13 @@
   ],
   "sourceCheckAt": "2026-10-17T08:26:45.919Z",
   "xEnabled": false,
-  "added": 0
+  "added": 0,
+  "summaryDiagnostics": [
+    {
+      "source": "Simon Willison",
+      "httpStatus": "429",
+      "providerCode": "1113",
+      "reason": "request_failed"
+    }
+  ]
 }
