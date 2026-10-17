@@ -34,6 +34,8 @@ export async function summarize(candidate,{env=process.env,fetchImpl=fetch}={}) 
     if(response.ok)return parseGlmSummary(await response.json());
     if([429,500,502,503,504].includes(response.status)&&attempt<2){await new Promise(resolve=>setTimeout(resolve,1000*(attempt+1)));continue;}
     const hint=response.status===401?'密钥无效':response.status===403?'无模型访问权限':response.status===429?'频率或额度受限':'请检查智谱控制台的模型权限和余额';
-    throw Error(`智谱 API HTTP ${response.status}：${hint}`);
+    let code='';
+    try { const error=await response.json(); const raw=String(error.error?.code||''); if(/^\d{1,10}$/.test(raw))code=`（错误码 ${raw}）`; } catch {}
+    throw Error(`智谱 API HTTP ${response.status}${code}：${hint}`);
   }
 }
