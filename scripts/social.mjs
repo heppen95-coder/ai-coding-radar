@@ -12,7 +12,8 @@ export function blueskyPosts(data,account){
 }
 export function selectCandidates(candidates,maxItems){
   const social=candidates.filter(c=>c.kind==='社交原帖').slice(0,Math.min(2,maxItems));
-  const media=[];const publishers=new Set();for(const c of candidates){if(c.media&&!publishers.has(c.source)&&media.length<Math.min(2,Math.max(0,maxItems-social.length))){media.push(c);publishers.add(c.source);}}
-  const selected=new Set([...social,...media].map(c=>c.url));
-  return [...social,...media,...candidates.filter(c=>!selected.has(c.url))].slice(0,maxItems);
+  const domestic=candidates.filter(c=>c.domestic&&!social.some(s=>s.url===c.url)).slice(0,Math.max(0,Math.min(1,maxItems-social.length)));
+  const media=[];const publishers=new Set();for(const c of candidates){if(c.media&&!social.includes(c)&&!domestic.includes(c)&&!publishers.has(c.source)&&media.length<Math.min(2,Math.max(0,maxItems-social.length-domestic.length))){media.push(c);publishers.add(c.source);}}
+  const selected=new Set([...social,...domestic,...media].map(c=>c.url));
+  return [...social,...domestic,...media,...candidates.filter(c=>!selected.has(c.url))].slice(0,maxItems);
 }

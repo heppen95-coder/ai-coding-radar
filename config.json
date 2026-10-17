@@ -70,6 +70,15 @@
         "https://cursor.com/blog/"
       ],
       "kind": "官方文章"
+    },
+    {
+      "name": "DeepSeek 官方公告",
+      "url": "https://www.deepseek.com/sitemap.xml",
+      "prefixes": [
+        "https://www.deepseek.com/news/"
+      ],
+      "kind": "国内官方公告",
+      "domestic": true
     }
   ],
   "github": [
@@ -117,7 +126,14 @@
     "software engineering",
     "pi ",
     "代码",
-    "编码"
+    "编码",
+    "deepseek",
+    "qwen",
+    "glm",
+    "minimax",
+    "kimi",
+    "大模型",
+    "模型"
   ],
   "bluesky": [
     {
@@ -129,6 +145,28 @@
       "name": "Geoffrey Huntley",
       "handle": "ghuntley.com",
       "did": "did:plc:r63key5ilrlzklg2sqcocgug"
+    }
+  ],
+  "modelOrgs": [
+    {
+      "name": "通义千问 Qwen",
+      "author": "Qwen"
+    },
+    {
+      "name": "DeepSeek",
+      "author": "deepseek-ai"
+    },
+    {
+      "name": "智谱 GLM",
+      "author": "zai-org"
+    },
+    {
+      "name": "MiniMax",
+      "author": "MiniMaxAI"
+    },
+    {
+      "name": "月之暗面 Kimi",
+      "author": "moonshotai"
     }
   ]
 }

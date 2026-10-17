@@ -76,6 +76,8 @@ node scripts/collect.mjs --dry-run
 
 ## 数据文件
 
+国内模型来源：Qwen、deepseek-ai、zai-org、MiniMaxAI、moonshotai 的官方 Hugging Face 模型仓库，以及 DeepSeek 官网公告。模型仓库仅以 createdAt 识别新增文本或视觉语言模型，读取公开模型卡，不使用 lastModified 冒充发布日期；页面明确标注日期为仓库创建时间。无近期新增时正常显示零候选，不补造新闻。
+
 新增免费 RSS 来源：Latent Space（AI 工程）、Hugging Face Blog（开源社区）、InfoQ AI（技术媒体）、MIT Technology Review AI（科技媒体）。只处理与既定主题有关的内容；媒体报道与官方公告分别标注。短订阅条目尝试读取公开正文，无法获取足够材料时由摘要筛选拒绝，不推断付费正文。每日六条处理名额中，社交原帖和不同媒体各预留最多两条，其余按时间排序补足。
 
 侧栏数量按当前期刊、归档日期及搜索条件统计；切换“全部资讯”才显示全站范围数量。
