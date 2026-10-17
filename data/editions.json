@@ -1,3 +1,16 @@
 [
-  {"id":"2026-10-17","date":"2026-10-17","title":"从生成代码，到稳定交付","description":"首期精选：独立验证、上下文管理与 Pi 的工具编排。","itemIds":["claude-review","pi-130","armin-codemode","cursor-efficiency","anthropic-scion","huntley-agency"]}
+  {
+    "id": "2026-10-17",
+    "date": "2026-10-17",
+    "title": "从生成代码，到稳定交付",
+    "description": "首期精选：独立验证、上下文管理与 Pi 的工具编排。",
+    "itemIds": [
+      "claude-review",
+      "pi-130",
+      "armin-codemode",
+      "cursor-efficiency",
+      "anthropic-scion",
+      "huntley-agency"
+    ]
+  }
 ]

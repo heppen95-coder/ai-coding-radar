@@ -1,7 +1,7 @@
 {
-  "lastAttemptAt": null,
+  "lastAttemptAt": "2026-10-17T10:02:02.875Z",
   "lastSuccessAt": null,
-  "mode": "公开来源连通性已验证；自动采集与中文摘要尚未启用",
+  "mode": "部分更新：新增 0 条；18 条摘要未完成",
   "sources": [
     {
       "name": "Armin Ronacher",
@@ -54,5 +54,7 @@
       "message": "发现 7 条候选"
     }
   ],
-  "sourceCheckAt": "2026-10-17T08:26:45.919Z"
+  "sourceCheckAt": "2026-10-17T08:26:45.919Z",
+  "xEnabled": false,
+  "added": 0
 }
