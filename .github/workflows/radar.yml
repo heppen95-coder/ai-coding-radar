@@ -35,10 +35,14 @@ jobs:
       - name: Install the supported OpenClaw CLI
         if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.collect) || (github.event_name == 'push' && contains(github.event.head_commit.message, '[collect]'))
         run: |
-          npm install --prefix "$RUNNER_TEMP/radar-openclaw-cli" --no-audit --no-fund openclaw@2026.10.4
+          npm install --prefix "$RUNNER_TEMP/radar-openclaw-cli" --no-audit --no-fund openclaw@2026.10.4 @openclaw/zai-provider@2026.10.4
           echo "OPENCLAW_CLI_PATH=$RUNNER_TEMP/radar-openclaw-cli/node_modules/openclaw/openclaw.mjs" >> "$GITHUB_ENV"
-          node "$RUNNER_TEMP/radar-openclaw-cli/node_modules/openclaw/openclaw.mjs" agent --help
-          node "$RUNNER_TEMP/radar-openclaw-cli/node_modules/openclaw/openclaw.mjs" agent exec --help
+          export OPENCLAW_ZAI_PLUGIN_PATH="$RUNNER_TEMP/radar-openclaw-cli/node_modules/@openclaw/zai-provider"
+          echo "OPENCLAW_ZAI_PLUGIN_PATH=$OPENCLAW_ZAI_PLUGIN_PATH" >> "$GITHUB_ENV"
+          export OPENCLAW_CONFIG_PATH="$RUNNER_TEMP/radar-config-check.json"
+          export ZAI_API_KEY="non-secret-config-check"
+          node --input-type=module -e 'import {personalAgentConfig} from "./scripts/openclaw-summary.mjs"; import {writeFileSync} from "node:fs"; writeFileSync(process.env.OPENCLAW_CONFIG_PATH,JSON.stringify(personalAgentConfig()));'
+          node "$RUNNER_TEMP/radar-openclaw-cli/node_modules/openclaw/openclaw.mjs" config validate --json
       - name: Collect and translate
         id: collect
         if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.collect) || (github.event_name == 'push' && contains(github.event.head_commit.message, '[collect]'))
