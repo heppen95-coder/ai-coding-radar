@@ -30,6 +30,8 @@ export async function summarizeWithOpenClaw(candidate,{env=process.env,executeIm
     await writeFile(promptFile,prompt);
     const childEnv={...env,ZAI_API_KEY:env.BIGMODEL_API_KEY.trim()};
     delete childEnv.BIGMODEL_API_KEY;delete childEnv.GITHUB_TOKEN;delete childEnv.X_BEARER_TOKEN;delete childEnv.OPENAI_API_KEY;
+    for(let attempt=0;attempt<2;attempt++){
+    if(attempt)await writeFile(promptFile,prompt+'\n\n输出必须是合法JSON：字符串中的英文双引号必须转义，或改用中文引号。不要在JSON前后添加任何文字。');
     let result;
     try{
       result=await executeImpl(process.execPath,[env.OPENCLAW_CLI_PATH,'agent','exec','--config',configFile,'--cwd',workspace,'--message-file',promptFile,'--model','zai/glm-5.3','--thinking','low','--timeout','180','--json'],{env:childEnv,cwd:workspace,timeout:210000,maxBuffer:2*1024*1024,windowsHide:true});
@@ -41,7 +43,8 @@ export async function summarizeWithOpenClaw(candidate,{env=process.env,executeIm
       const reason=[[/invalid config|configuration invalid/i,'配置验证失败'],[/unknown model|model not found/i,'模型未注册'],[/no api key|missing api key/i,'未找到认证配置'],[/unknown option/i,'命令参数不兼容'],[/plugin.*not found|cannot find.*plugin/i,'模型插件未找到'],[/timed out|timeout|ETIMEDOUT/i,'请求超时']].find(([pattern])=>pattern.test(diagnostic))?.[1];
       throw Error(`OpenClaw Agent 调用失败${reason?'：'+reason:''}${http?' HTTP '+http:''}${code?'（错误码 '+code+'）':''}`);
     }
-    return parseAgentResult(JSON.parse(result.stdout));
+    try{return parseAgentResult(JSON.parse(result.stdout));}catch(e){if(!(e instanceof SyntaxError)||attempt===1)throw e;}
+    }
   }finally{
     // The directory is created above by mkdtemp under the OS temp directory.
     if(path.dirname(dir)!==path.resolve(tmpdir())||!path.basename(dir).startsWith('radar-openclaw-'))throw Error('Temporary path check failed');
