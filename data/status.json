@@ -1,7 +1,7 @@
 {
-  "lastAttemptAt": "2026-10-17T14:09:18.990Z",
-  "lastSuccessAt": "2026-10-17T14:09:18.990Z",
-  "mode": "已完成采集：新增 5 条，处理 6 条候选",
+  "lastAttemptAt": "2026-10-17T14:18:51.308Z",
+  "lastSuccessAt": "2026-10-17T14:18:51.308Z",
+  "mode": "已完成采集：新增 4 条，处理 6 条候选",
   "sources": [
     {
       "name": "Bluesky · Simon Willison",
@@ -27,6 +27,26 @@
       "name": "Geoffrey Huntley",
       "ok": true,
       "message": "发现 15 条候选"
+    },
+    {
+      "name": "Latent Space",
+      "ok": true,
+      "message": "发现 20 条候选"
+    },
+    {
+      "name": "Hugging Face Blog",
+      "ok": true,
+      "message": "发现 880 条候选"
+    },
+    {
+      "name": "InfoQ AI",
+      "ok": true,
+      "message": "发现 15 条候选"
+    },
+    {
+      "name": "MIT Technology Review · AI",
+      "ok": true,
+      "message": "发现 10 条候选"
     },
     {
       "name": "Pi Agent",
@@ -66,6 +86,6 @@
   ],
   "sourceCheckAt": "2026-10-17T08:26:45.919Z",
   "xEnabled": false,
-  "added": 5,
+  "added": 4,
   "summaryDiagnostics": []
 }
