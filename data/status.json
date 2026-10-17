@@ -1,7 +1,7 @@
 {
-  "lastAttemptAt": "2026-10-17T11:07:24.820Z",
-  "lastSuccessAt": "2026-10-17T10:34:42.735Z",
-  "mode": "部分更新：新增 0 条；1 条摘要未完成",
+  "lastAttemptAt": "2026-10-17T14:09:18.990Z",
+  "lastSuccessAt": "2026-10-17T14:09:18.990Z",
+  "mode": "已完成采集：新增 5 条，处理 6 条候选",
   "sources": [
     {
       "name": "Bluesky · Simon Willison",
@@ -66,13 +66,6 @@
   ],
   "sourceCheckAt": "2026-10-17T08:26:45.919Z",
   "xEnabled": false,
-  "added": 0,
-  "summaryDiagnostics": [
-    {
-      "source": "Bluesky · Geoffrey Huntley",
-      "httpStatus": null,
-      "providerCode": null,
-      "reason": "invalid_json"
-    }
-  ]
+  "added": 5,
+  "summaryDiagnostics": []
 }
