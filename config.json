@@ -43,6 +43,13 @@
       "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed/",
       "kind": "科技媒体报道",
       "media": true
+    },
+    {
+      "name": "宝玉的分享",
+      "url": "https://baoyu.io/feed.xml",
+      "kind": "中文翻译与解读",
+      "media": true,
+      "compilation": true
     }
   ],
   "sitemaps": [
@@ -109,7 +116,9 @@
     "simonw",
     "OpenAIDevs",
     "GoogleDeepMind",
-    "cursor_ai"
+    "cursor_ai",
+    "karpathy",
+    "dotey"
   ],
   "keywords": [
     "coding",
@@ -172,5 +181,26 @@
   "xPublic": {
     "enabled": true,
     "maxPosts": 12
-  }
+  },
+  "chineseSources": [
+    {
+      "name": "秋橙 · Builder",
+      "url": "https://www.lqcxiang.com/builder/who/bcherny",
+      "type": "qiucheng"
+    },
+    {
+      "name": "智源社区",
+      "url": "https://hub.baai.ac.cn/",
+      "type": "baai",
+      "media": true,
+      "compilation": true
+    },
+    {
+      "name": "53AI",
+      "url": "https://www.53ai.com/",
+      "type": "ai53",
+      "media": true,
+      "compilation": true
+    }
+  ]
 }
