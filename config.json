@@ -5,21 +5,106 @@
   "lookbackDays": 7,
   "maxNewItems": 18,
   "feeds": [
-    {"name":"Armin Ronacher","url":"https://lucumr.pocoo.org/feed.atom","kind":"个人实践"},
-    {"name":"Simon Willison","url":"https://simonwillison.net/atom/everything/","kind":"个人实践"},
-    {"name":"Geoffrey Huntley","url":"https://ghuntley.com/rss/","kind":"个人观点"}
+    {
+      "name": "Armin Ronacher",
+      "url": "https://lucumr.pocoo.org/feed.atom",
+      "kind": "个人实践"
+    },
+    {
+      "name": "Simon Willison",
+      "url": "https://simonwillison.net/atom/everything/",
+      "kind": "个人实践"
+    },
+    {
+      "name": "Geoffrey Huntley",
+      "url": "https://ghuntley.com/rss/",
+      "kind": "个人观点"
+    }
   ],
   "sitemaps": [
-    {"name":"Anthropic","url":"https://www.anthropic.com/sitemap.xml","prefixes":["https://www.anthropic.com/engineering/","https://www.anthropic.com/news/"],"kind":"官方文章"},
-    {"name":"OpenAI Developers","url":"https://developers.openai.com/sitemap-index.xml","prefixes":["https://developers.openai.com/blog/"],"kind":"官方文章"},
-    {"name":"Cursor","url":"https://cursor.com/sitemap.xml","prefixes":["https://cursor.com/blog/"],"kind":"官方文章"}
+    {
+      "name": "Anthropic",
+      "url": "https://www.anthropic.com/sitemap.xml",
+      "prefixes": [
+        "https://www.anthropic.com/engineering/",
+        "https://www.anthropic.com/news/"
+      ],
+      "kind": "官方文章"
+    },
+    {
+      "name": "OpenAI Developers",
+      "url": "https://developers.openai.com/sitemap-index.xml",
+      "prefixes": [
+        "https://developers.openai.com/blog/"
+      ],
+      "kind": "官方文章"
+    },
+    {
+      "name": "Cursor",
+      "url": "https://cursor.com/sitemap.xml",
+      "prefixes": [
+        "https://cursor.com/blog/"
+      ],
+      "kind": "官方文章"
+    }
   ],
   "github": [
-    {"name":"Pi Agent","repo":"earendil-works/pi"},
-    {"name":"Claude Code","repo":"anthropics/claude-code"},
-    {"name":"Codex","repo":"openai/codex"},
-    {"name":"Gemini CLI","repo":"google-gemini/gemini-cli"}
+    {
+      "name": "Pi Agent",
+      "repo": "earendil-works/pi"
+    },
+    {
+      "name": "Claude Code",
+      "repo": "anthropics/claude-code"
+    },
+    {
+      "name": "Codex",
+      "repo": "openai/codex"
+    },
+    {
+      "name": "Gemini CLI",
+      "repo": "google-gemini/gemini-cli"
+    }
   ],
-  "xAccounts": ["AnthropicAI","ClaudeDevs","bcherny","_catwu","badlogicgames","mitsuhiko","simonw","OpenAIDevs","GoogleDeepMind","cursor_ai"],
-  "keywords": ["coding","code review","harness","agent","claude","codex","gemini","model","MCP","codemode","LLM","software engineering","pi ","代码","编码"]
+  "xAccounts": [
+    "AnthropicAI",
+    "ClaudeDevs",
+    "bcherny",
+    "_catwu",
+    "badlogicgames",
+    "mitsuhiko",
+    "simonw",
+    "OpenAIDevs",
+    "GoogleDeepMind",
+    "cursor_ai"
+  ],
+  "keywords": [
+    "coding",
+    "code review",
+    "harness",
+    "agent",
+    "claude",
+    "codex",
+    "gemini",
+    "model",
+    "MCP",
+    "codemode",
+    "LLM",
+    "software engineering",
+    "pi ",
+    "代码",
+    "编码"
+  ],
+  "bluesky": [
+    {
+      "name": "Simon Willison",
+      "handle": "simonwillison.net",
+      "did": "did:plc:kft6lu4trxowqmter2b6vg6z"
+    },
+    {
+      "name": "Geoffrey Huntley",
+      "handle": "ghuntley.com",
+      "did": "did:plc:r63key5ilrlzklg2sqcocgug"
+    }
+  ]
 }

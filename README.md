@@ -93,6 +93,8 @@ node scripts/collect.mjs --dry-run
 
 ## 当前云端方式：OpenClaw + Coding Plan
 
+免费社交来源使用 Bluesky public AppView，无需登录或社交平台密钥。config.json 的 bluesky 列表固定作者 DID（账号改名不影响原帖链接），当前包含 Simon Willison 与 Geoffrey Huntley。只采集作者自己的非回复帖子，附带链接预览作为上下文，不把转发当作作者原文。每日处理名额为社交原帖预留最多两条，其余继续处理博客和版本发布。中文摘要沿用已有 Coding Plan 额度；“免费”指社交数据接口。X 仍需单独配置凭证后才启用。
+
 GitHub 工作流使用官方 openclaw@2026.10.4 CLI（Node.js 24），由真实 OpenClaw Agent 执行个人资讯整理。默认 zai/glm-5.3，智谱中国 Coding Plan 端点。每次最多6条，单条检查最多1条。未启用任何消息通道或对外代理服务。
 
 密钥仍放 BIGMODEL_API_KEY，子进程通过 ZAI_API_KEY 使用；配置文件只包含环境变量引用，不保存密钥。Agent 工具全部禁用，不能读取仓库、执行命令或获取 GitHub Token。标准按量 API 模块保留供单独选择，当前云端选择 SUMMARY_BACKEND=openclaw。
