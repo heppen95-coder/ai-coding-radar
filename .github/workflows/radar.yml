@@ -34,7 +34,7 @@ jobs:
         run: npm test
       - name: Collect and translate
         id: collect
-        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.collect)
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.collect) || (github.event_name == 'push' && contains(github.event.head_commit.message, '[collect]'))
         continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ github.token }}
