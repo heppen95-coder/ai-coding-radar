@@ -1,0 +1,13 @@
+{
+  "name": "ai-coding-radar",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "update": "node scripts/collect.mjs",
+    "preview": "node scripts/serve.mjs",
+    "test": "node --test scripts/*.test.mjs"
+  },
+  "engines": { "node": ">=22" }
+}

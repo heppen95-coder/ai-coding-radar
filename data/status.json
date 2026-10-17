@@ -1,0 +1,58 @@
+{
+  "lastAttemptAt": null,
+  "lastSuccessAt": null,
+  "mode": "公开来源连通性已验证；自动采集与中文摘要尚未启用",
+  "sources": [
+    {
+      "name": "Armin Ronacher",
+      "ok": true,
+      "message": "发现 10 条候选"
+    },
+    {
+      "name": "Simon Willison",
+      "ok": true,
+      "message": "发现 30 条候选"
+    },
+    {
+      "name": "Geoffrey Huntley",
+      "ok": true,
+      "message": "发现 15 条候选"
+    },
+    {
+      "name": "Pi Agent",
+      "ok": true,
+      "message": "发现 10 条候选"
+    },
+    {
+      "name": "Claude Code",
+      "ok": true,
+      "message": "发现 10 条候选"
+    },
+    {
+      "name": "Codex",
+      "ok": true,
+      "message": "发现 1 条候选"
+    },
+    {
+      "name": "Gemini CLI",
+      "ok": true,
+      "message": "发现 1 条候选"
+    },
+    {
+      "name": "Anthropic",
+      "ok": true,
+      "message": "发现 5 条候选"
+    },
+    {
+      "name": "OpenAI Developers",
+      "ok": true,
+      "message": "发现 0 条候选"
+    },
+    {
+      "name": "Cursor",
+      "ok": true,
+      "message": "发现 7 条候选"
+    }
+  ],
+  "sourceCheckAt": "2026-10-17T08:26:45.919Z"
+}

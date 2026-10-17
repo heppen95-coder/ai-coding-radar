@@ -1,0 +1,68 @@
+name: Collect and publish Code Radar
+on:
+  push:
+    branches: [main]
+  schedule:
+    # 北京时间每天 09:17。精选的两日周期在脚本中计算，跨月不重置。
+    - cron: '17 1 * * *'
+  workflow_dispatch:
+    inputs:
+      collect:
+        description: 'Collect new stories before publishing'
+        type: boolean
+        default: true
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: code-radar
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check core behavior
+        run: npm test
+      - name: Collect and translate
+        id: collect
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.collect)
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          SUMMARY_MODEL: ${{ vars.SUMMARY_MODEL }}
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+        run: npm run update
+      - name: Preserve history and collection status
+        if: always()
+        run: |
+          git config user.name 'code-radar-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update radar stories and source status'
+            git push
+          fi
+      - name: Build site
+        run: npm run build
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - name: Publish to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+      - name: Report incomplete collection
+        if: steps.collect.outcome == 'failure'
+        run: |
+          echo 'Collection was incomplete. The site has been published with previous content and visible source status.' >> "$GITHUB_STEP_SUMMARY"
+          exit 1
