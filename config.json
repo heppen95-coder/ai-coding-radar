@@ -168,5 +168,9 @@
       "name": "月之暗面 Kimi",
       "author": "moonshotai"
     }
-  ]
+  ],
+  "xPublic": {
+    "enabled": true,
+    "maxPosts": 12
+  }
 }

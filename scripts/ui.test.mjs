@@ -13,6 +13,6 @@ test('页面数据加载、分类、搜索、日期空状态和详情链接',asy
  location.hash='#/archive/2026-01-01';winEvents.hashchange();assert.match(node('#view').innerHTML,/这个日期暂无收录/);
  assert.ok(node('#categories').innerHTML.includes('Pi Agent<span>0</span>'));assert.match(node('#view-head').innerHTML,/0 STORIES/);
  location.hash='#/all';winEvents.hashchange();assert.ok(node('#categories').innerHTML.includes(`Pi Agent<span>${data.items.filter(i=>i.category==='Pi Agent').length}</span>`));
- location.hash='#/sources';winEvents.hashchange();assert.match(node('#view').innerHTML,/X API 尚未启用/);
+ location.hash='#/sources';winEvents.hashchange();assert.match(node('#view').innerHTML,/免费公开采集|免费公开嵌入采集|X API 尚未启用/);
  click('[data-detail]');assert.equal(node('#detail').open,true);assert.match(node('#detail-body').innerHTML,/https:\/\/github.com\/earendil-works\/pi\/releases\/tag\/v1.3.0/);
 });

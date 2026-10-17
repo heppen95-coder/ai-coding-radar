@@ -11,7 +11,9 @@ export function blueskyPosts(data,account){
   });
 }
 export function selectCandidates(candidates,maxItems){
-  const social=candidates.filter(c=>c.kind==='社交原帖').slice(0,Math.min(2,maxItems));
+  const socialPool=candidates.filter(c=>c.kind==='社交原帖');
+  const x=socialPool.find(c=>c.platform==='x');
+  const social=[...(x?[x]:[]),...socialPool.filter(c=>c!==x)].slice(0,Math.min(2,maxItems));
   const domestic=candidates.filter(c=>c.domestic&&!social.some(s=>s.url===c.url)).slice(0,Math.max(0,Math.min(1,maxItems-social.length)));
   const media=[];const publishers=new Set();for(const c of candidates){if(c.media&&!social.includes(c)&&!domestic.includes(c)&&!publishers.has(c.source)&&media.length<Math.min(2,Math.max(0,maxItems-social.length-domestic.length))){media.push(c);publishers.add(c.source);}}
   const selected=new Set([...social,...domestic,...media].map(c=>c.url));
