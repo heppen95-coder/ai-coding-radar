@@ -1,6 +1,8 @@
 import {readFile,writeFile,rename} from 'node:fs/promises';
 import {dateInShanghai,parseFeed,tag,plain,safeUrl,idFor,editionDue,makeEdition,validateItem} from './core.mjs';
-import {summarize} from './summarize.mjs';
+import {summarize as summarizeStandard} from './summarize.mjs';
+import {summarizeWithOpenClaw} from './openclaw-summary.mjs';
+const summarize=process.env.SUMMARY_BACKEND==='openclaw'?summarizeWithOpenClaw:summarizeStandard;
 const read=async p=>JSON.parse(await readFile(p,'utf8'));
 const [config,items,editions,oldStatus,rejected]=await Promise.all(['config.json','data/items.json','data/editions.json','data/status.json','data/rejected.json'].map(read));
 const dry=process.argv.includes('--dry-run'),today=dateInShanghai(), now=new Date().toISOString();

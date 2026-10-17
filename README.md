@@ -90,3 +90,11 @@ node scripts/collect.mjs --dry-run
 将官方密钥放入 GitHub Secrets 的 BIGMODEL_API_KEY；无需 OPENAI_API_KEY。如曾设置 SUMMARY_MODEL 为其他模型，请改成 glm-5.3 或删除该变量。使用普通模型 API 的计费与权限，不假设 Coding Plan 套餐可用于资讯摘要自动化。
 
 接口及模型规则：https://docs.bigmodel.cn/cn/guide/models/text/glm-5.3 。代码中的模拟测试不代表真实 API 已验证，需配置密钥后手动运行一次采集确认。
+
+## 当前云端方式：OpenClaw + Coding Plan
+
+GitHub 工作流使用官方 openclaw@2026.10.4 CLI（Node.js 24），由真实 OpenClaw Agent 执行个人资讯整理。默认 zai/glm-5.3，智谱中国 Coding Plan 端点。每次最多6条，单条检查最多1条。未启用任何消息通道或对外代理服务。
+
+密钥仍放 BIGMODEL_API_KEY，子进程通过 ZAI_API_KEY 使用；配置文件只包含环境变量引用，不保存密钥。Agent 工具全部禁用，不能读取仓库、执行命令或获取 GitHub Token。标准按量 API 模块保留供单独选择，当前云端选择 SUMMARY_BACKEND=openclaw。
+
+官方支持说明：https://docs.bigmodel.cn/cn/coding-plan/tool/openclaw 。OpenClaw 使用套餐受到调度、额度和公平使用限制。真实验证结果以 Actions 和 data/status.json 为准。
