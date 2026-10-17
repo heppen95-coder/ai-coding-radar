@@ -118,5 +118,21 @@
     "category": "Agent 能力",
     "kind": "官方发布",
     "featured": false
+  },
+  {
+    "id": "e8a95e9b22df9875a5",
+    "url": "https://simonwillison.net/2026/Oct/16/code-review/",
+    "originalTitle": "Quoting Addy Osmani, Morgan Westlee Lunt, and Qing Wang",
+    "source": "Simon Willison",
+    "author": "Simon Willison",
+    "publishedAt": "2026-10-17",
+    "collectedAt": "2026-10-17",
+    "kind": "个人实践",
+    "title": "Claude Code 团队的代码评审实践：从人工关卡到持续评审",
+    "summary": "Simon Willison 引用 Addy Osmani、Morgan Westlee Lunt 与 Qing Wang 谈 Claude Code 团队的评审方式。他们认为\"是否有人读过代码\"并不准确，更应问\"这次改动可能出什么问题，用自动化还是人工检查来发现\"。评审时机因此改变：过去评审是开发末端的关卡，先写代码、开 PR 再等同事看；现在评审持续进行，类似写作时的拼写检查。多数改动在交给人类前已被 Claude 评审并修正过至少一次，能抓住常见错误，让团队把注意力留给更高层次的问题与审查。",
+    "takeaway": "把评审从末端关卡改为持续进行，用 AI 先过滤常规错误，人工聚焦高风险与高层级问题，并按改动风险选择自动或人工检查。",
+    "category": "Harness 实践",
+    "importance": 4,
+    "featured": false
   }
 ]
