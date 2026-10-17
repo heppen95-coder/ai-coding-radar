@@ -27,8 +27,8 @@
 
 | 类型 | 名称 | 内容 |
 | --- | --- | --- |
-| Secret | OPENAI_API_KEY | 模型 API 密钥 |
-| Variable | SUMMARY_MODEL | 你账号可用、支持 Responses API 的文本模型 ID |
+| Secret | BIGMODEL_API_KEY | 智谱官方平台 API 密钥 |
+| Variable（可选） | SUMMARY_MODEL | 默认为 glm-5.3；已有其他值请改为 glm-5.3 |
 | Secret（可选） | X_BEARER_TOKEN | X 应用的公开数据读取 Token |
 
 未配置模型密钥时，网页仍可发布初始内容；新消息不会自动生成中文摘要，任务会失败并保留状态。模型 API 与 X API 可能收费，网站托管免费不代表采集免费。X 每次请求最多读取 50 条，请按需要缩小账号列表。
@@ -82,3 +82,11 @@ node scripts/collect.mjs --dry-run
 - `public/`：网页；`scripts/`：采集、构建与检查逻辑。
 
 当前交付状态：本地可构建；远程 GitHub 仓库、Pages 与自动任务需要在用户账号连接后启用。
+
+## 智谱 GLM-5.3 摘要接入
+
+当前默认直连 https://open.bigmodel.cn/api/paas/v4/chat/completions，使用 glm-5.3、thinking enabled 和 reasoning_effort low。仅发布完整的中文正文，不公开 reasoning_content。每条输出预算 8192 tokens（包含思考），超时 120 秒。
+
+将官方密钥放入 GitHub Secrets 的 BIGMODEL_API_KEY；无需 OPENAI_API_KEY。如曾设置 SUMMARY_MODEL 为其他模型，请改成 glm-5.3 或删除该变量。使用普通模型 API 的计费与权限，不假设 Coding Plan 套餐可用于资讯摘要自动化。
+
+接口及模型规则：https://docs.bigmodel.cn/cn/guide/models/text/glm-5.3 。代码中的模拟测试不代表真实 API 已验证，需配置密钥后手动运行一次采集确认。

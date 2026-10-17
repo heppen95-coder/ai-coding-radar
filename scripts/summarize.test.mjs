@@ -1,0 +1,9 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';
+import {glmRequest,parseGlmSummary,summarize,GLM_ENDPOINT} from './summarize.mjs';
+const candidate={source:'Pi',originalTitle:'New coding agent',body:'Release details'};
+const answer={relevant:true,title:'编码更新',summary:'本次更新改善工具调用。',takeaway:'验证真实任务。',category:'Pi Agent',importance:4};
+const envelope=(content,finish_reason='stop')=>({choices:[{finish_reason,message:{content,reasoning_content:'不应发布的内部推理'}}]});
+test('GLM-5.3 官方请求使用始终开启的思考和 low 强度',()=>{const payload=glmRequest(candidate,{BIGMODEL_API_KEY:'test-key'});assert.equal(payload.model,'glm-5.3');assert.deepEqual(payload.thinking,{type:'enabled'});assert.equal(payload.reasoning_effort,'low');assert.equal(payload.messages[1].role,'user');assert.throws(()=>glmRequest(candidate,{}),/BIGMODEL_API_KEY/);});
+test('完整中文结果可发布，无关内容过滤，截断与错误格式拒绝',()=>{assert.deepEqual(parseGlmSummary(envelope(JSON.stringify(answer))),answer);assert.equal(parseGlmSummary(envelope('{"relevant":false}')),null);assert.throws(()=>parseGlmSummary(envelope(JSON.stringify(answer),'length')),/未完整/);assert.throws(()=>parseGlmSummary(envelope('{"relevant":true}')),/中文/);assert.throws(()=>parseGlmSummary(envelope(JSON.stringify({...answer,category:'Other'}))),/分类/);});
+test('智谱密钥仅发往官方端点，返回内容不包含推理',async()=>{let seen;const result=await summarize(candidate,{env:{BIGMODEL_API_KEY:'test-key'},fetchImpl:async(url,opts)=>{seen={url,opts};return{ok:true,json:async()=>envelope(JSON.stringify(answer))};}});assert.equal(seen.url,GLM_ENDPOINT);assert.equal(seen.opts.headers.Authorization,'Bearer test-key');assert.equal(result.reasoning_content,undefined);assert.equal(result.summary,answer.summary);});
+test('鉴权错误反馈不泄露密钥',async()=>{await assert.rejects(summarize(candidate,{env:{BIGMODEL_API_KEY:'do-not-print'},fetchImpl:async()=>({ok:false,status:401})}),e=>e.message.includes('401')&&!e.message.includes('do-not-print'));});

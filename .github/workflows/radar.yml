@@ -38,7 +38,7 @@ jobs:
         continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ github.token }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          BIGMODEL_API_KEY: ${{ secrets.BIGMODEL_API_KEY }}
           SUMMARY_MODEL: ${{ vars.SUMMARY_MODEL }}
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
         run: npm run update
