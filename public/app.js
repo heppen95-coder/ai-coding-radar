@@ -4,15 +4,19 @@ const categories = ['全部主题','模型发布','Agent 能力','Harness 实践
 let db, selected = '全部主题', query = '';
 const fmt = s => s ? s.slice(0,10).replaceAll('-','.') : '尚未运行';
 function route(){const [view = 'latest', value = ''] = location.hash.replace(/^#\/?/,'').split('/');return {view, value:decodeURIComponent(value)};}
-function matches(item){return (selected === '全部主题' || item.category === selected) && (!query || [item.title,item.summary,item.source,item.author,item.originalTitle].join(' ').toLowerCase().includes(query.toLowerCase()));}
-function filters(){ $('#categories').innerHTML = categories.map(c => `<button class="${c===selected?'selected':''}" data-category="${esc(c)}" aria-pressed="${c===selected}">${esc(c)}<span>${c==='全部主题'?db.items.length:db.items.filter(i=>i.category===c).length}</span></button>`).join(''); }
+function matchesSearch(item){return !query || [item.title,item.summary,item.source,item.author,item.originalTitle].join(' ').toLowerCase().includes(query.toLowerCase());}
+function matches(item){return (selected === '全部主题' || item.category === selected) && matchesSearch(item);}
+function filters(scope){const pool=scope.filter(matchesSearch); $('#categories').innerHTML = categories.map(c => `<button class="${c===selected?'selected':''}" data-category="${esc(c)}" aria-pressed="${c===selected}">${esc(c)}<span>${c==='全部主题'?pool.length:pool.filter(i=>i.category===c).length}</span></button>`).join(''); }
 function story(i,n,featured=false){return `<article class="story ${featured?'featured-story':''}"><div class="story-number">${String(n+1).padStart(2,'0')}</div><div><div class="story-top"><span class="tag ${i.category==='Pi Agent'?'pi':i.category==='模型发布'?'model':''}">${esc(i.category)}</span><span>${esc(i.source)}</span><time datetime="${esc(i.publishedAt)}">${fmt(i.publishedAt)}</time></div><h3><button data-detail="${esc(i.id)}">${esc(i.title)}</button></h3><p>${esc(i.summary)}</p>${i.takeaway?`<p class="takeaway"><strong>实践启发 / </strong>${esc(i.takeaway)}</p>`:''}<div class="story-bottom"><span>${esc(i.kind)} · 收录于 ${fmt(i.collectedAt)}</span><a class="original-link" href="${esc(i.url)}" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a></div></div></article>`;}
 function heading(title,sub,count){$('#view-head').innerHTML=`<div class="view-heading"><div><h2>${esc(title)}</h2><p>${esc(sub)}</p></div><span class="number">${esc(count)}</span></div>`;}
 function empty(msg='试试其他主题或关键词。'){return `<div class="empty"><strong>这里还没有收录内容</strong>${esc(msg)}</div>`;}
 function render(){
- if(!db)return; filters(); const {view,value}=route();
+ if(!db)return; const {view,value}=route();
+ const edition=db.editions.find(e=>e.id===value)||db.editions[0];
+ const scope=view==='all'||view==='sources'?db.items:view==='archive'?db.items.filter(i=>!value||i.publishedAt.startsWith(value)):(edition?.itemIds||[]).map(id=>db.items.find(i=>i.id===id)).filter(Boolean);
+ filters(scope);
  document.querySelectorAll('[data-nav]').forEach(a=>a.classList.toggle('active',a.dataset.nav===view));
- const items=db.items.filter(matches).sort((a,b)=>b.publishedAt.localeCompare(a.publishedAt));
+ const items=scope.filter(matches).sort((a,b)=>b.publishedAt.localeCompare(a.publishedAt));
  let html='';
  if(view==='sources'){
   heading('信息从哪里来','原始出处优先，持续积累可验证的实践。','SOURCE DIRECTORY');

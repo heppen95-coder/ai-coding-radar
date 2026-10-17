@@ -76,6 +76,10 @@ node scripts/collect.mjs --dry-run
 
 ## 数据文件
 
+新增免费 RSS 来源：Latent Space（AI 工程）、Hugging Face Blog（开源社区）、InfoQ AI（技术媒体）、MIT Technology Review AI（科技媒体）。只处理与既定主题有关的内容；媒体报道与官方公告分别标注。短订阅条目尝试读取公开正文，无法获取足够材料时由摘要筛选拒绝，不推断付费正文。每日六条处理名额中，社交原帖和不同媒体各预留最多两条，其余按时间排序补足。
+
+侧栏数量按当前期刊、归档日期及搜索条件统计；切换“全部资讯”才显示全站范围数量。
+
 - `data/items.json`：已发布的中文资讯。
 - `data/editions.json`：各期精选引用的资讯 ID。
 - `data/status.json`：采集时间、来源错误与启用状态。

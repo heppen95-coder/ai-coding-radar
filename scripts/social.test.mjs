@@ -11,3 +11,7 @@ test('有限处理名额兼顾社交与其他来源且不重复',()=>{
   const rows=[{url:'a',kind:'官方文章'},{url:'b',kind:'社交原帖'},{url:'c',kind:'社交原帖'},{url:'d',kind:'社交原帖'}];
   assert.deepEqual(selectCandidates(rows,3).map(x=>x.url),['b','c','a']);assert.equal(selectCandidates(rows,1).length,1);
 });
+test('媒体预留名额覆盖不同出版方，并遵守总上限',()=>{
+  const rows=[{url:'a',source:'Blog'},{url:'b',media:true,source:'Media A'},{url:'c',media:true,source:'Media A'},{url:'d',media:true,source:'Media B'}];
+  assert.deepEqual(selectCandidates(rows,3).map(x=>x.url),['b','d','a']);assert.deepEqual(selectCandidates(rows,1).map(x=>x.url),['b']);
+});

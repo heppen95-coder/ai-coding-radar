@@ -19,6 +19,30 @@
       "name": "Geoffrey Huntley",
       "url": "https://ghuntley.com/rss/",
       "kind": "个人观点"
+    },
+    {
+      "name": "Latent Space",
+      "url": "https://www.latent.space/feed",
+      "kind": "AI 工程媒体",
+      "media": true
+    },
+    {
+      "name": "Hugging Face Blog",
+      "url": "https://huggingface.co/blog/feed.xml",
+      "kind": "开源社区文章",
+      "media": true
+    },
+    {
+      "name": "InfoQ AI",
+      "url": "https://www.infoq.com/feed/ai-ml-data-eng/",
+      "kind": "技术媒体报道",
+      "media": true
+    },
+    {
+      "name": "MIT Technology Review · AI",
+      "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed/",
+      "kind": "科技媒体报道",
+      "media": true
     }
   ],
   "sitemaps": [
