@@ -40,6 +40,7 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           BIGMODEL_API_KEY: ${{ secrets.BIGMODEL_API_KEY }}
           SUMMARY_MODEL: ${{ vars.SUMMARY_MODEL }}
+          SUMMARY_MAX_ITEMS: ${{ contains(github.event.head_commit.message, '[check-model]') && '1' || '' }}
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
         run: npm run update
       - name: Preserve history and collection status
