@@ -1,5 +1,5 @@
 {
-  "lastAttemptAt": "2026-10-17T10:12:15.754Z",
+  "lastAttemptAt": "2026-10-17T10:25:38.676Z",
   "lastSuccessAt": null,
   "mode": "部分更新：新增 0 条；1 条摘要未完成",
   "sources": [
@@ -60,8 +60,8 @@
   "summaryDiagnostics": [
     {
       "source": "Simon Willison",
-      "httpStatus": "429",
-      "providerCode": "1113",
+      "httpStatus": null,
+      "providerCode": null,
       "reason": "request_failed"
     }
   ]
