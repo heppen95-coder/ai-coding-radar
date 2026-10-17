@@ -1,8 +1,18 @@
 {
-  "lastAttemptAt": "2026-10-17T10:34:42.735Z",
+  "lastAttemptAt": "2026-10-17T11:07:24.820Z",
   "lastSuccessAt": "2026-10-17T10:34:42.735Z",
-  "mode": "已完成采集：新增 1 条，处理 1 条候选",
+  "mode": "部分更新：新增 0 条；1 条摘要未完成",
   "sources": [
+    {
+      "name": "Bluesky · Simon Willison",
+      "ok": true,
+      "message": "发现 37 条候选"
+    },
+    {
+      "name": "Bluesky · Geoffrey Huntley",
+      "ok": true,
+      "message": "发现 41 条候选"
+    },
     {
       "name": "Armin Ronacher",
       "ok": true,
@@ -56,6 +66,13 @@
   ],
   "sourceCheckAt": "2026-10-17T08:26:45.919Z",
   "xEnabled": false,
-  "added": 1,
-  "summaryDiagnostics": []
+  "added": 0,
+  "summaryDiagnostics": [
+    {
+      "source": "Bluesky · Geoffrey Huntley",
+      "httpStatus": null,
+      "providerCode": null,
+      "reason": "invalid_json"
+    }
+  ]
 }
