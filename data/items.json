@@ -374,5 +374,23 @@
     "category": "Harness 实践",
     "importance": 4,
     "featured": false
+  },
+  {
+    "id": "16c9de1f791cdca156",
+    "url": "https://x.com/ClaudeDevs/status/2111209208012210409",
+    "originalTitle": "We keep improving performance across Claude, and you may have noticed it starts responding sooner! Claude Code now gzips the conversation it sends on ",
+    "source": "X · @ClaudeDevs",
+    "author": "ClaudeDevs",
+    "publishedAt": "2026-10-16",
+    "collectedAt": "2026-10-17",
+    "kind": "社交原帖",
+    "platform": "x",
+    "discoveredVia": "https://www.latent.space/feed",
+    "title": "Claude Code 性能优化：gzip 压缩对话与云端会话即时启动",
+    "summary": "Anthropic 官方在 X（@ClaudeDevs）发文称，Claude 系列性能持续改进，用户可能注意到 Claude 响应开始得更早。具体措施包括：Claude Code 现在对每轮发送的对话内容进行 gzip 压缩，使请求更快到达模型；云端会话也会在用户开始输入时立即启动。该信息为公司自报的性能优化说明，未附实测数据，图片内容不可见。原文为嵌入文本，可能缺失长帖后续内容与引用线程。",
+    "takeaway": "对自建 Agent 或 CLI 编码工具而言，压缩请求载荷与提前预热会话是低成本的延迟优化方向，可对照评估。",
+    "category": "Harness 实践",
+    "importance": 3,
+    "featured": false
   }
 ]
