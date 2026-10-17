@@ -9,7 +9,7 @@ const execute=promisify(execFile);
 export function personalAgentConfig(pluginPath=process.env.OPENCLAW_ZAI_PLUGIN_PATH){
   return {
     ...(pluginPath?{plugins:{allow:['zai'],load:{paths:[pluginPath]},entries:{zai:{enabled:true}}}}:{}),
-    models:{providers:{zai:{baseUrl:'https://open.bigmodel.cn/api/coding/paas/v4',apiKey:'${ZAI_API_KEY}'}}},
+    models:{providers:{zai:{baseUrl:'https://open.bigmodel.cn/api/coding/paas/v4',apiKey:'${ZAI_API_KEY}',api:'openai-completions',models:[{id:'glm-5.3',name:'GLM-5.3',reasoning:true,input:['text'],contextWindow:1048576,maxTokens:8192}]}}},
     agents:{defaults:{model:{primary:'zai/glm-5.3'},contextInjection:'never'}},
     tools:{deny:['*']}
   };

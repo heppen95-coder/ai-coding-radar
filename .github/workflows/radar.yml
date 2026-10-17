@@ -43,6 +43,7 @@ jobs:
           export ZAI_API_KEY="non-secret-config-check"
           node --input-type=module -e 'import {personalAgentConfig} from "./scripts/openclaw-summary.mjs"; import {writeFileSync} from "node:fs"; writeFileSync(process.env.OPENCLAW_CONFIG_PATH,JSON.stringify(personalAgentConfig()));'
           node "$RUNNER_TEMP/radar-openclaw-cli/node_modules/openclaw/openclaw.mjs" config validate --json
+          node "$RUNNER_TEMP/radar-openclaw-cli/node_modules/openclaw/openclaw.mjs" models list --all --provider zai --json
       - name: Collect and translate
         id: collect
         if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.collect) || (github.event_name == 'push' && contains(github.event.head_commit.message, '[collect]'))
