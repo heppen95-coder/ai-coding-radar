@@ -1,7 +1,7 @@
 {
-  "lastAttemptAt": "2026-10-18T01:43:46.280Z",
-  "lastSuccessAt": "2026-10-18T01:43:46.280Z",
-  "mode": "已完成采集：新增 6 条，处理 6 条候选",
+  "lastAttemptAt": "2026-10-19T01:46:24.087Z",
+  "lastSuccessAt": "2026-10-19T01:46:24.087Z",
+  "mode": "已完成采集：新增 5 条，处理 6 条候选",
   "sources": [
     {
       "name": "Bluesky · Simon Willison",
@@ -116,7 +116,7 @@
     {
       "name": "Anthropic",
       "ok": true,
-      "message": "发现 5 条候选"
+      "message": "发现 6 条候选"
     },
     {
       "name": "OpenAI Developers",
@@ -141,7 +141,7 @@
   ],
   "sourceCheckAt": "2026-10-17T08:26:45.919Z",
   "xEnabled": false,
-  "added": 6,
+  "added": 5,
   "summaryDiagnostics": [],
   "xPublicEnabled": true
 }

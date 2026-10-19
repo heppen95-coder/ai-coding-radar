@@ -12,5 +12,25 @@
       "anthropic-scion",
       "huntley-agency"
     ]
+  },
+  {
+    "id": "2026-10-19",
+    "date": "2026-10-19",
+    "title": "AI 编码两日精选",
+    "description": "模型、Agent、Harness 与 Pi 的新变化。",
+    "itemIds": [
+      "8118ec2bea8acd5413",
+      "3fb3ee107cfe5598b1",
+      "e8a95e9b22df9875a5",
+      "66a8784860f53e7737",
+      "cb33fe2b5dba73c4cf",
+      "cac24968e5aa0d5bf2",
+      "52c408d9f44924002a",
+      "fe88897c2a464af3e3",
+      "e7853eb1d1af988af1",
+      "72c1ad9945f7e5485a",
+      "c1e12b22d43131d220",
+      "e6e33db39d167ac4f3"
+    ]
   }
 ]
