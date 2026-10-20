@@ -1,7 +1,7 @@
 {
-  "lastAttemptAt": "2026-10-19T01:46:24.087Z",
-  "lastSuccessAt": "2026-10-19T01:46:24.087Z",
-  "mode": "已完成采集：新增 5 条，处理 6 条候选",
+  "lastAttemptAt": "2026-10-20T01:48:06.295Z",
+  "lastSuccessAt": "2026-10-20T01:48:06.295Z",
+  "mode": "已完成采集：新增 6 条，处理 6 条候选",
   "sources": [
     {
       "name": "Bluesky · Simon Willison",
@@ -36,7 +36,7 @@
     {
       "name": "Hugging Face Blog",
       "ok": true,
-      "message": "发现 880 条候选"
+      "message": "发现 882 条候选"
     },
     {
       "name": "InfoQ AI",
@@ -116,7 +116,7 @@
     {
       "name": "Anthropic",
       "ok": true,
-      "message": "发现 6 条候选"
+      "message": "发现 5 条候选"
     },
     {
       "name": "OpenAI Developers",
@@ -141,7 +141,7 @@
   ],
   "sourceCheckAt": "2026-10-17T08:26:45.919Z",
   "xEnabled": false,
-  "added": 5,
+  "added": 6,
   "summaryDiagnostics": [],
   "xPublicEnabled": true
 }
