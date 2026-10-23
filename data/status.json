@@ -1,7 +1,7 @@
 {
-  "lastAttemptAt": "2026-10-22T01:48:35.891Z",
-  "lastSuccessAt": "2026-10-22T01:48:35.891Z",
-  "mode": "已完成采集：新增 4 条，处理 6 条候选",
+  "lastAttemptAt": "2026-10-23T01:50:56.706Z",
+  "lastSuccessAt": "2026-10-23T01:50:56.706Z",
+  "mode": "已完成采集：新增 6 条，处理 6 条候选",
   "sources": [
     {
       "name": "Bluesky · Simon Willison",
@@ -36,7 +36,7 @@
     {
       "name": "Hugging Face Blog",
       "ok": true,
-      "message": "发现 888 条候选"
+      "message": "发现 889 条候选"
     },
     {
       "name": "InfoQ AI",
@@ -86,7 +86,7 @@
     {
       "name": "MiniMax · 官方模型仓库",
       "ok": true,
-      "message": "发现 0 条候选"
+      "message": "发现 1 条候选"
     },
     {
       "name": "月之暗面 Kimi · 官方模型仓库",
@@ -136,12 +136,12 @@
     {
       "name": "X · 免费公开嵌入",
       "ok": true,
-      "message": "发现 11 条候选；订阅文章引用发现 80 条链接，近期待读取 11 条"
+      "message": "发现 10 条候选；订阅文章引用发现 76 条链接，近期待读取 10 条"
     }
   ],
   "sourceCheckAt": "2026-10-17T08:26:45.919Z",
   "xEnabled": false,
-  "added": 4,
+  "added": 6,
   "summaryDiagnostics": [],
   "xPublicEnabled": true
 }
