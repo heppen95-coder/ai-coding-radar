@@ -1,12 +1,12 @@
 {
-  "lastAttemptAt": "2026-10-23T01:50:56.706Z",
-  "lastSuccessAt": "2026-10-23T01:50:56.706Z",
+  "lastAttemptAt": "2026-10-24T01:51:44.975Z",
+  "lastSuccessAt": "2026-10-24T01:51:44.975Z",
   "mode": "已完成采集：新增 6 条，处理 6 条候选",
   "sources": [
     {
       "name": "Bluesky · Simon Willison",
       "ok": true,
-      "message": "发现 38 条候选"
+      "message": "发现 39 条候选"
     },
     {
       "name": "Bluesky · Geoffrey Huntley",
@@ -36,7 +36,7 @@
     {
       "name": "Hugging Face Blog",
       "ok": true,
-      "message": "发现 889 条候选"
+      "message": "发现 890 条候选"
     },
     {
       "name": "InfoQ AI",
@@ -86,7 +86,7 @@
     {
       "name": "MiniMax · 官方模型仓库",
       "ok": true,
-      "message": "发现 1 条候选"
+      "message": "发现 0 条候选"
     },
     {
       "name": "月之暗面 Kimi · 官方模型仓库",
@@ -106,7 +106,7 @@
     {
       "name": "Codex",
       "ok": true,
-      "message": "发现 0 条候选"
+      "message": "发现 1 条候选"
     },
     {
       "name": "Gemini CLI",
@@ -136,7 +136,7 @@
     {
       "name": "X · 免费公开嵌入",
       "ok": true,
-      "message": "发现 10 条候选；订阅文章引用发现 76 条链接，近期待读取 10 条"
+      "message": "发现 10 条候选；订阅文章引用发现 75 条链接，近期待读取 10 条"
     }
   ],
   "sourceCheckAt": "2026-10-17T08:26:45.919Z",
