@@ -1,6 +1,6 @@
 {
-  "lastAttemptAt": "2026-10-26T01:57:25.010Z",
-  "lastSuccessAt": "2026-10-26T01:57:25.010Z",
+  "lastAttemptAt": "2026-10-27T01:54:24.272Z",
+  "lastSuccessAt": "2026-10-27T01:54:24.272Z",
   "mode": "已完成采集：新增 6 条，处理 6 条候选",
   "sources": [
     {
@@ -116,7 +116,7 @@
     {
       "name": "Anthropic",
       "ok": true,
-      "message": "发现 12 条候选"
+      "message": "发现 9 条候选"
     },
     {
       "name": "OpenAI Developers",
