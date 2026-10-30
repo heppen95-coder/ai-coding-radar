@@ -1,7 +1,7 @@
 {
-  "lastAttemptAt": "2026-10-29T02:07:12.187Z",
-  "lastSuccessAt": "2026-10-29T02:07:12.187Z",
-  "mode": "已完成采集：新增 5 条，处理 6 条候选",
+  "lastAttemptAt": "2026-10-30T02:08:10.944Z",
+  "lastSuccessAt": "2026-10-30T02:08:10.944Z",
+  "mode": "已完成采集：新增 6 条，处理 6 条候选",
   "sources": [
     {
       "name": "Bluesky · Simon Willison",
@@ -36,7 +36,7 @@
     {
       "name": "Hugging Face Blog",
       "ok": true,
-      "message": "发现 891 条候选"
+      "message": "发现 894 条候选"
     },
     {
       "name": "InfoQ AI",
@@ -106,7 +106,7 @@
     {
       "name": "Codex",
       "ok": true,
-      "message": "发现 1 条候选"
+      "message": "发现 2 条候选"
     },
     {
       "name": "Gemini CLI",
@@ -116,7 +116,7 @@
     {
       "name": "Anthropic",
       "ok": true,
-      "message": "发现 5 条候选"
+      "message": "发现 3 条候选"
     },
     {
       "name": "OpenAI Developers",
@@ -136,12 +136,12 @@
     {
       "name": "X · 免费公开嵌入",
       "ok": true,
-      "message": "发现 10 条候选；订阅文章引用发现 83 条链接，近期待读取 10 条"
+      "message": "发现 11 条候选；订阅文章引用发现 76 条链接，近期待读取 11 条"
     }
   ],
   "sourceCheckAt": "2026-10-17T08:26:45.919Z",
   "xEnabled": false,
-  "added": 5,
+  "added": 6,
   "summaryDiagnostics": [],
   "xPublicEnabled": true
 }
