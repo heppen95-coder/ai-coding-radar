@@ -127,5 +127,25 @@
       "da9c62c52f6c35e691",
       "8333c89d9d7c203a03"
     ]
+  },
+  {
+    "id": "2026-10-31",
+    "date": "2026-10-31",
+    "title": "AI 编码两日精选",
+    "description": "模型、Agent、Harness 与 Pi 的新变化。",
+    "itemIds": [
+      "a41c6b1e5e903c6310",
+      "1f6d67391a1445d38a",
+      "3b8361d079acb9cc9e",
+      "d8d383388a16948b5f",
+      "630df4a0fa161dbe77",
+      "0b10feeb1a78db8171",
+      "49d99f09e516b736e5",
+      "5bc6ab676bc9703e6f",
+      "c0ac8125a03d8f7483",
+      "03975e8c91dee7f180",
+      "61c7bbbdaa3af4302c",
+      "7ed26ca28bbde61a49"
+    ]
   }
 ]
