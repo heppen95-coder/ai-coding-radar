@@ -1,7 +1,7 @@
 {
-  "lastAttemptAt": "2026-11-01T02:11:21.067Z",
-  "lastSuccessAt": "2026-11-01T02:11:21.067Z",
-  "mode": "已完成采集：新增 4 条，处理 6 条候选",
+  "lastAttemptAt": "2026-11-02T02:15:33.063Z",
+  "lastSuccessAt": "2026-11-02T02:15:33.063Z",
+  "mode": "已完成采集：新增 5 条，处理 6 条候选",
   "sources": [
     {
       "name": "Bluesky · Simon Willison",
@@ -136,12 +136,12 @@
     {
       "name": "X · 免费公开嵌入",
       "ok": true,
-      "message": "发现 11 条候选；订阅文章引用发现 74 条链接，近期待读取 11 条"
+      "message": "发现 10 条候选；订阅文章引用发现 74 条链接，近期待读取 10 条"
     }
   ],
   "sourceCheckAt": "2026-10-17T08:26:45.919Z",
   "xEnabled": false,
-  "added": 4,
+  "added": 5,
   "summaryDiagnostics": [],
   "xPublicEnabled": true
 }
