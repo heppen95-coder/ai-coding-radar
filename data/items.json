@@ -1988,5 +1988,53 @@
     "category": "Harness 实践",
     "importance": 3,
     "featured": false
+  },
+  {
+    "id": "afd7ee706c3292cab5",
+    "url": "https://bsky.app/profile/did:plc:kft6lu4trxowqmter2b6vg6z/post/3mzgb77cpis2w",
+    "originalTitle": "There's a buzzy new paper about GPT-6 Astra being able to directly interpret model weights (prompts full of floating point numbers) - I tried it with ",
+    "source": "Bluesky · Simon Willison",
+    "author": "Simon Willison",
+    "publishedAt": "2026-11-04",
+    "collectedAt": "2026-11-04",
+    "kind": "社交原帖",
+    "title": "Simon Willison 复现「权重空间编程」：Qwen 3.8 27B 本地也能直接解读模型权重",
+    "summary": "一篇名为《Sparks of Weight-Space Programming》的新论文（作者 Rikiya Takehi、Jayden Teoh、Alex Zhang、Omar Khattab）声称 GPT-6 Astra 能直接解读由浮点数组成的模型权重提示。Simon Willison 出于验证目的，在自己的笔记本电脑上用 Qwen 3.8 27B 进行了个人实测：运行 45 分钟以上后，该模型也能完成类似任务。他在博客文章中记录了实验过程。需注意：原论文结论属于作者自报，Willison 的复现是独立个人实测，样本和条件有限，两者均非系统性基准评测。",
+    "takeaway": "面对夺眼球的新能力论文，用本地可运行的小模型亲自复现，是低成本验证其可信度的实用做法。",
+    "category": "Agent 能力",
+    "importance": 3,
+    "featured": false
+  },
+  {
+    "id": "994f843215d9be7d56",
+    "url": "https://hub.baai.ac.cn/view/59332",
+    "originalTitle": "DeepSeek官方智能体教程来了：一句话造插件，7套提示词免费公开",
+    "source": "智源社区",
+    "author": "智源社区",
+    "publishedAt": "2026-11-04",
+    "collectedAt": "2026-11-04",
+    "kind": "中文编译（社区公开摘要／分享时间）",
+    "title": "DeepSeek Harness 推出“创造模式”：一句话指令自动生成插件",
+    "summary": "据智源社区公开摘要（日期为社区分享时间，非原文发布日期），DeepSeek Harness 推出“创造模式”：用户输入一句自然语言指令，AI 即可自动生成代码、开发插件，并将新功能集成到工作界面。该模式宣称支持 DIY 专属界面、制作 3D 游戏、设计海报、剪辑视频等多种创意任务，实现从需求描述到功能落地的一站式自动化开发。上述能力描述均为官方/社区自报口径，摘要中未提供第三方实测数据。",
+    "takeaway": "一句话生成插件与集成工作界面，可作为低成本扩展个人工具链的思路；实际效果需自行实测验证，不宜全信宣传口径。",
+    "category": "Harness 实践",
+    "importance": 3,
+    "featured": false
+  },
+  {
+    "id": "f1a111e72742f0df3d",
+    "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+    "originalTitle": "Qwen 3.8 27B on my laptop can interpret model weights, too",
+    "source": "Simon Willison",
+    "author": "Simon Willison",
+    "publishedAt": "2026-11-04",
+    "collectedAt": "2026-11-04",
+    "kind": "个人实践",
+    "title": "Simon Willison 实测：本地 Qwen 3.8 27B 也能从原始权重推断模型行为",
+    "summary": "论文《Sparks of Weight-Space Programming》提出 LLM 可原生解读并修改神经网络权重，并展示了 GPT-6 Astra 仅凭原始权重判断网络训练任务、手写优于 PPO 训练网络、微调少量权重提升 Qwen3.5-0.8B 的 MATH-500 分数等结果（均为作者自报，未独立复现）。Simon Willison 复现了其中“无工具看权重猜游戏”实验：在笔记本上运行的 Qwen 3.8 27B 成功从权重推断出 Pac-Man、Pong、Breakout 三款网格游戏，仅在最冷门的 Freeway 上失败，耗时 46 分钟至 1 小时不等。他提醒该论文混淆了“无工具读权重”与“借助代码改模型”两件事，Honnibal 与 Goedecke 也提出批评；他认为结果有趣，但“源代码时代终结”之类的解读过度了。",
+    "takeaway": "小模型端侧也能完成令人惊讶的权重推理任务，值得亲手用开源 prompt 复现验证；对新论文的夸张解读需区分自报结果与独立实测，谨慎采信。",
+    "category": "模型发布",
+    "importance": 4,
+    "featured": false
   }
 ]
