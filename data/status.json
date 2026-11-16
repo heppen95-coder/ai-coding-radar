@@ -1,7 +1,7 @@
 {
-  "lastAttemptAt": "2026-11-15T02:16:53.918Z",
-  "lastSuccessAt": "2026-11-15T02:16:53.918Z",
-  "mode": "已完成采集：新增 6 条，处理 6 条候选",
+  "lastAttemptAt": "2026-11-16T02:28:08.409Z",
+  "lastSuccessAt": "2026-11-16T02:28:08.409Z",
+  "mode": "已完成采集：新增 5 条，处理 6 条候选",
   "sources": [
     {
       "name": "Bluesky · Simon Willison",
@@ -61,7 +61,7 @@
     {
       "name": "智源社区",
       "ok": true,
-      "message": "发现 4 条候选；仅处理公开内容，新增 X 引用 0 条"
+      "message": "发现 2 条候选；仅处理公开内容，新增 X 引用 0 条"
     },
     {
       "name": "53AI",
@@ -106,7 +106,7 @@
     {
       "name": "Codex",
       "ok": true,
-      "message": "发现 3 条候选"
+      "message": "发现 2 条候选"
     },
     {
       "name": "Gemini CLI",
@@ -141,7 +141,7 @@
   ],
   "sourceCheckAt": "2026-10-17T08:26:45.919Z",
   "xEnabled": false,
-  "added": 6,
+  "added": 5,
   "summaryDiagnostics": [],
   "xPublicEnabled": true
 }
