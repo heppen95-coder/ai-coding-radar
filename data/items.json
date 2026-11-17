@@ -2982,5 +2982,37 @@
     "category": "Harness 实践",
     "importance": 2,
     "featured": false
+  },
+  {
+    "id": "daab8049af8f933014",
+    "url": "https://latent.space/p/bfl/",
+    "originalTitle": "Building Visual Intelligence — Andreas Blattmann & Dustin Podell, Black Forest Labs",
+    "source": "Latent Space",
+    "author": "Latent Space",
+    "publishedAt": "2026-11-17",
+    "collectedAt": "2026-11-17",
+    "kind": "AI 工程媒体",
+    "title": "黑森林实验室谈视觉智能：FLUX 3 联合训练视频与音频，Kontext 源于数小时小实验",
+    "summary": "Latent Space 播客访谈 Black Forest Labs 创始团队：Andreas Blattmann（Latent Diffusion 共同发明人、Stable Diffusion 联合作者）与 Dustin Podell（SDXL 一作、FLUX Kontext 负责人）。两人阐释 BFL 为何从图像转向视频与世界模型：静态图告诉你球在哪，视频展示它如何到达，撞击声则在镜头漏拍时提供时序证据，因此 FLUX 3（公司自报）将三种信号联合训练。访谈还讨论逐帧锐化产生闪烁、需时间一致性的升采样器也基于 FLUX 3 骨干；自回归与扩散各自优势取决于训练成本还是推理等待；Kontext 起源于几小时的小规模关系标注实验，后续团队投入数月打磨。用户自发用 FLUX 修复老照片是意外用例。",
+    "takeaway": "选技术路线时先用几小时的小实验验证假设，再决定投入大规模算力；评测生成模型别只看单帧，时间一致性与跨模态证据往往更能暴露真实水平。",
+    "category": "模型发布",
+    "importance": 4,
+    "featured": false
+  },
+  {
+    "id": "a50437ccc021c62371",
+    "url": "https://simonwillison.net/2026/Nov/16/llm/",
+    "originalTitle": "llm 0.37.3",
+    "source": "Simon Willison",
+    "author": "Simon Willison",
+    "publishedAt": "2026-11-17",
+    "collectedAt": "2026-11-17",
+    "kind": "个人实践",
+    "title": "llm 0.37.3：修复 SQLite 3.54.1 导致的日志代码问题",
+    "summary": "Simon Willison 发布 llm 0.37.3，这是一个 bug 修复版本，起因是 Homebrew 最新打包的 SQLite 3.54.1 修复了 json_object 嵌套子查询的行为：在 3.54.0 中 select json_object('a', (select json_array(1))) 返回 {\"a\":[1]}，而 3.54.1 返回 {\"a\":\"[1]\"}，导致 llm 的日志代码出错。SQLite 作者 D. Richard Hipp 确认这是 SQLite 原有的 bug，(SELECT json_array(...)) 按文档返回 SQL 文本而非 JSON，新行为才是正确的。修复方式是在子查询外包一层 json() 函数强制转为 JSON。",
+    "takeaway": "依赖 SQLite JSON 函数的工具要警惕版本升级引起的语义变化；嵌套子查询返回 JSON 时显式套一层 json() 更稳妥。",
+    "category": "Harness 实践",
+    "importance": 2,
+    "featured": false
   }
 ]
