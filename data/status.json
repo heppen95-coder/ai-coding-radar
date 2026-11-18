@@ -1,7 +1,7 @@
 {
-  "lastAttemptAt": "2026-11-17T02:24:56.211Z",
-  "lastSuccessAt": "2026-11-17T02:24:56.211Z",
-  "mode": "已完成采集：新增 2 条，处理 6 条候选",
+  "lastAttemptAt": "2026-11-18T08:35:25.063Z",
+  "lastSuccessAt": "2026-11-18T08:35:25.063Z",
+  "mode": "已完成采集：新增 5 条，处理 6 条候选",
   "sources": [
     {
       "name": "Bluesky · Simon Willison",
@@ -56,7 +56,7 @@
     {
       "name": "秋橙 · Builder",
       "ok": true,
-      "message": "发现 0 条候选；发现 41 条新的 X 原帖引用"
+      "message": "发现 0 条候选；发现 42 条新的 X 原帖引用"
     },
     {
       "name": "智源社区",
@@ -106,7 +106,7 @@
     {
       "name": "Codex",
       "ok": true,
-      "message": "发现 1 条候选"
+      "message": "发现 2 条候选"
     },
     {
       "name": "Gemini CLI",
@@ -136,12 +136,12 @@
     {
       "name": "X · 免费公开嵌入",
       "ok": true,
-      "message": "发现 12 条候选；订阅文章引用发现 88 条链接，近期待读取 12 条"
+      "message": "发现 10 条候选；订阅文章引用发现 85 条链接，近期待读取 10 条"
     }
   ],
   "sourceCheckAt": "2026-10-17T08:26:45.919Z",
   "xEnabled": false,
-  "added": 2,
+  "added": 5,
   "summaryDiagnostics": [],
   "xPublicEnabled": true
 }
