@@ -1,6 +1,6 @@
 {
-  "lastAttemptAt": "2026-11-19T08:50:55.114Z",
-  "lastSuccessAt": "2026-11-19T08:50:55.114Z",
+  "lastAttemptAt": "2026-11-20T08:36:25.619Z",
+  "lastSuccessAt": "2026-11-20T08:36:25.619Z",
   "mode": "已完成采集：新增 6 条，处理 6 条候选",
   "sources": [
     {
@@ -106,12 +106,12 @@
     {
       "name": "Codex",
       "ok": true,
-      "message": "发现 2 条候选"
+      "message": "发现 3 条候选"
     },
     {
       "name": "Gemini CLI",
       "ok": true,
-      "message": "发现 3 条候选"
+      "message": "发现 4 条候选"
     },
     {
       "name": "Anthropic",
@@ -136,7 +136,7 @@
     {
       "name": "X · 免费公开嵌入",
       "ok": true,
-      "message": "发现 11 条候选；订阅文章引用发现 86 条链接，近期待读取 11 条"
+      "message": "发现 12 条候选；订阅文章引用发现 89 条链接，近期待读取 12 条"
     }
   ],
   "sourceCheckAt": "2026-10-17T08:26:45.919Z",
