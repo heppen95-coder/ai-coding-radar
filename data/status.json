@@ -1,12 +1,12 @@
 {
-  "lastAttemptAt": "2026-11-24T10:59:09.735Z",
-  "lastSuccessAt": "2026-11-24T10:59:09.735Z",
+  "lastAttemptAt": "2026-11-25T09:54:02.371Z",
+  "lastSuccessAt": "2026-11-25T09:54:02.371Z",
   "mode": "已完成采集：新增 6 条，处理 6 条候选",
   "sources": [
     {
       "name": "Bluesky · Simon Willison",
       "ok": true,
-      "message": "发现 42 条候选"
+      "message": "发现 43 条候选"
     },
     {
       "name": "Bluesky · Geoffrey Huntley",
@@ -56,7 +56,7 @@
     {
       "name": "秋橙 · Builder",
       "ok": true,
-      "message": "发现 0 条候选；发现 44 条新的 X 原帖引用"
+      "message": "发现 0 条候选；发现 46 条新的 X 原帖引用"
     },
     {
       "name": "智源社区",
@@ -106,7 +106,7 @@
     {
       "name": "Codex",
       "ok": true,
-      "message": "发现 2 条候选"
+      "message": "发现 1 条候选"
     },
     {
       "name": "Gemini CLI",
@@ -116,7 +116,7 @@
     {
       "name": "Anthropic",
       "ok": true,
-      "message": "发现 5 条候选"
+      "message": "发现 4 条候选"
     },
     {
       "name": "OpenAI Developers",
@@ -136,7 +136,7 @@
     {
       "name": "X · 免费公开嵌入",
       "ok": true,
-      "message": "发现 12 条候选；订阅文章引用发现 95 条链接，近期待读取 12 条"
+      "message": "发现 12 条候选；订阅文章引用发现 98 条链接，近期待读取 12 条"
     }
   ],
   "sourceCheckAt": "2026-10-17T08:26:45.919Z",
