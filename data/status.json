@@ -1,6 +1,6 @@
 {
-  "lastAttemptAt": "2026-11-26T09:34:15.247Z",
-  "lastSuccessAt": "2026-11-26T09:34:15.247Z",
+  "lastAttemptAt": "2026-11-27T09:42:43.857Z",
+  "lastSuccessAt": "2026-11-27T09:42:43.857Z",
   "mode": "已完成采集：新增 5 条，处理 6 条候选",
   "sources": [
     {
@@ -36,7 +36,7 @@
     {
       "name": "Hugging Face Blog",
       "ok": true,
-      "message": "发现 917 条候选"
+      "message": "发现 918 条候选"
     },
     {
       "name": "InfoQ AI",
@@ -136,7 +136,7 @@
     {
       "name": "X · 免费公开嵌入",
       "ok": true,
-      "message": "发现 12 条候选；订阅文章引用发现 100 条链接，近期待读取 12 条"
+      "message": "发现 11 条候选；订阅文章引用发现 91 条链接，近期待读取 11 条"
     }
   ],
   "sourceCheckAt": "2026-10-17T08:26:45.919Z",
